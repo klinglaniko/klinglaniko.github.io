@@ -1,33 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html, body, div{
     scroll-behavior: smooth;
 }
 
+body{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+
+@media (min-width: 501px) {
 
 ::-webkit-scrollbar {
     width: 15px;
     background-color: #1687A7;
-  }
+}
   
-  
-
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     border-radius: 10px;
     min-height: 20px;
     background-color: white;
     border: 3px solid #1687A7;
 
-  }
+}
 
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: #D3E0EA;
 
-  }
+}
 
-  ::-webkit-scrollbar-thumb:active {
+::-webkit-scrollbar-thumb:active {
     background-color: #276678;
 
-  }
+}
+
+}
   
 
 .layout-horizontal{
@@ -242,7 +250,7 @@ body {
 
 .main-body-div{
     overflow-y: scroll;
-    height: calc(100vh - 136px);
+    height: calc(100dvh - 136px);
     width: 100%;
 
 
@@ -250,7 +258,7 @@ body {
 
 
 .image-main-div, .image-main-div img{
-    height: calc(100vh - 136px - 50px);
+    height: calc(100dvh - 136px - 50px);
     width: 100%;
     position: relative;
 
@@ -397,11 +405,11 @@ ul.submenu{
     }
 
     .main-body-div{
-        height: calc(100vh - 136px - 47px); 
+        height: calc(100dvh - 136px - 47px); 
     }
 
     .image-main-div, .image-main-div img{
-        height: calc(100vh - 136px - 50px - 49px);   
+        height: calc(100dvh - 136px - 50px - 49px);   
     }
 
     .direction-on-size-3, .direction-on-size{
@@ -481,11 +489,11 @@ ul.submenu{
  
 
         .main-body-div{
-            height: calc(100vh - 136px + 64px);    
+            height: calc(100dvh - 136px + 62px);    
         }
 
         .image-main-div, .image-main-div img{
-            height: calc(100vh - 136px - 50px + 64px);   
+            height: calc(100dvh - 136px - 50px + 62px);   
         }
 
         .toolbar-button{
