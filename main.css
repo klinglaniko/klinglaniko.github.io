@@ -1,9 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik');
 html, body, div{
     scroll-behavior: smooth;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik');
+
 body{
     height: 100%;
     width: 100%;
