@@ -3,37 +3,46 @@ html, body, div{
     scroll-behavior: smooth;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     height: 100%;
     width: 100%;
     position: fixed;
+
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+
+    
+    height: 100%;
+    overflow: hidden
 }
 
 
 @media (min-width: 479px) {
 
-::-webkit-scrollbar {
-    width: 15px;
-    background-color: #1687A7;
-}
-  
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    min-height: 20px;
-    background-color: white;
-    border: 3px solid #1687A7;
+    ::-webkit-scrollbar {
+        width: 15px;
+        background-color: #1687A7;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        min-height: 20px;
+        background-color: white;
+        border: 3px solid #1687A7;
 
-}
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: #D3E0EA;
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #D3E0EA;
 
-}
+    }
 
-::-webkit-scrollbar-thumb:active {
-    background-color: #276678;
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #276678;
 
-}
+    }
 
 }
   
@@ -59,7 +68,7 @@ body{
 
 .image-main-div img{
 
-object-fit: cover;
+    object-fit: cover;
 
 }
 
@@ -160,16 +169,6 @@ p.large{
     align-items: center;
     width: 100%;
     justify-content: center;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-
-    
-    height: 100%;
-    overflow: hidden
 }
 
 .more{
@@ -273,6 +272,7 @@ body {
 }
 
 .toolbar-div{
+    height: 49px;
     margin-top: auto;
     margin-left: auto;
 }
@@ -284,6 +284,7 @@ body {
 }
 
 .header-logo-div{
+    height: 86px;
     margin: 25px;
     width: fit-content;
 }
@@ -547,13 +548,14 @@ ul.submenu{
         }
 
         .image-logo{
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
 
             margin-right: 10px;
         }
 
         .header-logo-div{
+            height: 55px;
             margin: 10px;
             width: fit-content;
         }
