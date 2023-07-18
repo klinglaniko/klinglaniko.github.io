@@ -302,7 +302,7 @@ ul.submenu{
     margin-top: 0px;
     margin-bottom: 0px;
     display: none;
-    transform: translateY(calc(74px - 245px));
+    transform: translateY(calc(75px - 245px));
     position: absolute;
    
     width: 100%;
@@ -635,6 +635,7 @@ input{
 
 
 ul.submenu li{
+    height: 49px;
     background-color: #D3E0EA;
 
 } 
@@ -654,7 +655,7 @@ label {
 }
   
 input:checked~ul.submenu {
-    transform: translateY(74px);
+    transform: translateY(75px);
 }
 
 h3{
