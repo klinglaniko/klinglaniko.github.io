@@ -23,41 +23,47 @@
                 <div class="direction-on-size-3 header-div-content">
                     <label for="check01"  class="toolbar-menu-button"><img src="menu.svg" alt="menu"></label>
                     <a href="index.html" class="layout-horizontal header-logo-div">
-                        <img src="logo.svg" alt="WunderFöhn Logo" class="image-logo">
-                        <div style="display: flex; flex-direction: column; justify-content: center;">
-                            <h1 style="margin: 0; font-size: 1.5rem;">WunderFöhn Hundesalon</h1>
-                            <span style="font-size: 1rem; color: #555;">Hundefriseurin Anikó</span>
-                        </div>
-                    </a>
+                        <img src="logo.svg" alt="Logo" class="image-logo">
+                        <h1 class>Hundefriseur<br>Anikó</h1>
+                    </a>    
+                    <div class="layout-horizontal toolbar-div">
+                        <a href="index.html" class="toolbar-button toolbar-button-selected">Hauptseite</a>
+                        <a href="about_me.html" class="toolbar-button">Über mich</a>
+                        <a href="pictures.html" class="toolbar-button">Bilder</a>
+                        <a href="price_list.html" class="toolbar-button">Preisliste</a>
+                        <a href="contact.html" class="toolbar-button">Kontakt</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="banner">
-                <div class="banner-content">
-                    <h2>Willkommen bei</h2>
-                    <h1>Hundefriseur Anikó</h1>
-                    <p>Pirchäckerstraße 27, 8020 Graz</p>
+        </div>
+        <div class="main-body-div">
+            <div class="image-main-div">
+                <img src="banner.jpg" alt="Hundefriseur Anikó">
+                <div>
+                    <h2>WunderFöhn Hundesalon</h2>   
+                    <h1>Pirchäckerstraße 27, Graz</h1>   
                 </div>
             </div>
-
-            <div class="content-div">
+            <a href="#mich"><img src="more.svg" alt="down arrow" class="more"></a>
+            
+            <div class="div-content">
+                <h3 id="mich" style="margin-top: 0px;">Ein paar Worte über mich</h3>
                 <div class="direction-on-size">
-                    <img src="pami.png" alt="Hundefriseurin Anikó" class="circular-image" style="width: 250px; height: 250px; object-fit: cover;">
-                    <div class="align-left" style="margin-left: 20px;">
-                        <h2>Über mich</h2>
-                        <p>
+                    <img src="me.jpg" alt="Bild von Anikó" class="large-image">
+                    <div class="align-up">
+                        <p class="large">
                             Herzlich willkommen! Ich bin Anikó, leidenschaftliche Hundefriseurin im <strong>WunderFöhn Hundesalon</strong>. 
-                            Schon immer haben Tiere eine große Rolle in meinem Leben gespielt. Im Jahr 2015 habe ich meine Ausbildung zur Hundefriseurin mit Erfolg abgeschlossen.
+                            Schon immer haben Tiere eine große Rolle in meinem Leben gespielt. Im Jahr 2015 habe ich meine Ausbildung zur Hundefriseurin erfolgreich abgeschlossen.
                         </p>
-                        <p>
-                            Seit 2022 lebe ich in Österreich und freue mich darauf, Ihren Hund in unserem Salon in Graz fachgerecht und liebevoll zu pflegen. 
-                            Das Wohlbefinden und ein stressfreier Umgang mit Ihren Vierbeinern stehen für mich an erster Stelle.
+                        <p class="large">
+                            Seit 2022 lebe ich in Österreich und sorge im Salon in Graz mit viel Liebe und Geduld für das Wohlbefinden Ihrer Vierbeiner. 
+                            Ein stressfreier Umgang und professionelle Pflege stehen für mich an erster Stelle.
                         </p>
                         <button onclick="location.href='about_me.html'" type="button">Mehr erfahren</button>
                     </div>
                 </div>   
 
-                <h3 style="margin-top: 40px;">Vorher & Nachher</h3>
+                <h3>Vorher & Nachher</h3>
                 <div class="align-center">
                     <div class="direction-on-size">
                         <img src="before.png" alt="Hund vor dem Schnitt" class="larger-image round-left-on-size">
@@ -66,15 +72,11 @@
 
                     <div style="margin-top: 20px;">
                         <button onclick="location.href='price_list.html'" type="button" class="primary" style="margin-right: 10px;">Preisliste</button>
-                        <button onclick="location.href='contact.html'" type="button"  style="margin-right: 10px;">Kontakt & Termin</button>
-                        <button onclick="location.href='pictures.html'" type="button">Fotogalerie</button>
+                        <button onclick="location.href='contact.html'" type="button"  style="margin-right: 10px;">Kontakt</button>
+                        <button onclick="location.href='pictures.html'" type="button">Bildergalerie</button>
                     </div>
                 </div>
             </div> 
-            
-            <footer style="text-align: center; padding: 20px; background-color: #f0f0f0; margin-top: 40px;">
-                <p>© 2024 Hundefriseur Anikó im WunderFöhn Hundesalon | Pirchäckerstraße 27, 8020 Graz</p>
-            </footer>
         </div>
     </div>
 </body>
