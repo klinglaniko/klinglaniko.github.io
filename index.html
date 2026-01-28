@@ -5,75 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hundefriseur Anikó</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="logo.svg" type="image/svg">
 </head>
 <body>
-    <div class="main-div">
-        <input id="check01" type="checkbox" name="menu" />
-        <ul class="submenu">
-            <li><a href="index.html" class="submenu-selected">Hauptseite</a></li>
-            <li><a href="about_me.html">Über mich</a></li>
-            <li><a href="pictures.html">Bilder</a></li>
-            <li><a href="price_list.html">Preisliste</a></li>
-            <li><a href="contact.html">Kontakt</a></li>    
-        </ul>
-        <div style="z-index: 2; width: 100%;">
-            <div class="header-div">
-                <div class="direction-on-size-3 header-div-content">
-                    <label for="check01"  class="toolbar-menu-button"><img src="menu.svg" alt="menu"></label>
-                    <a href="index.html" class="layout-horizontal header-logo-div">
-                        <img src="logo.svg" alt="Logo" class="image-logo">
-                        <h1 class>Hundefriseur<br>Anikó</h1>
-                    </a>    
-                    <div class="layout-horizontal toolbar-div">
-                        <a href="index.html" class="toolbar-button toolbar-button-selected">Hauptseite</a>
-                        <a href="about_me.html" class="toolbar-button">Über mich</a>
-                        <a href="pictures.html" class="toolbar-button">Bilder</a>
-                        <a href="price_list.html" class="toolbar-button">Preisliste</a>
-                        <a href="contact.html" class="toolbar-button">Kontakt</a>
-                    </div>
-                </div>
+    <div class="webbar">
+        <div class="direction-on-size-3">  
+            <a href="index.html" class="layout-horizontal toolbar">
+                <img src="media/icons/logo.svg" alt="Logo" id="logo">
+                <h1 class>Hundefriseur Anikó</h1>
+            </a>    
+            <div class="layout-horizontal tab-layout">
+                <a href="index.html" class="tab selected">Hauptseite</a>
+                <a href="about_me.html" class="tab">Über mich</a>
+                <a href="pictures.html" class="tab">Bilder</a>
+                <a href="price_list.html" class="tab">Preisliste</a>
+                <a href="contact.html" class="tab">Kontakt</a>
             </div>
         </div>
-        <div class="main-body-div">
-            <div class="image-main-div">
-                <img src="banner.jpg" alt="Pami kutya">
+    </div>
+    <div class="main-scroll-area">
+
+        <div class="banner">
+            <div class="direction-on-size banner-foreground">
                 <div>
-                    <h2>WunderFöhn Hundesalon</h2>   
-                    <h1>Pirchäckerstraße 27, Hintergebäude Graz</h1>   
+             
+                    <h1>WunderFöhn Hundesalon</h1>  
+                    <h2>Pirchäckerstraße 27, Hintergebäude Graz</h2>    
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0Ssktt7XRZogYwCVtAD9RQHXSkDmws99NY2XVj34koobSvotu6NlUfItkendrImp3QuS3y-X37" target="_blank" class="button dark" style="margin-top: 25px;">Terminbuchung<img
+                            src="media/icons/out.svg"></a>
                 </div>
             </div>
-            <a href="#mich"><img src="more.svg" alt="down arrow" class="more"></a>
-            
-            <div class="div-content">
-                <h3 id="mich" style="margin-top: 0px;">Ein paar Worte über mich</h3>
-                <div class="direction-on-size">
-                    <img src="me.jpg" alt="Bild von mir" class="large-image">
-                    <div class="align-up">
-                        <p class="large">Ich habe Tiere schon immer geliebt. Ich habe selbst einen Hund und beschloss 2015, in Ungarn eine Ausbildung zur Hundefriseurin zu machen. Ich habe die Prüfungen mit gutem Erfolg bestanden. Im Jahr 2022 bin ich nach Österreich gezogen und möchte Kunden helfen, die aus irgendeinem Grund nicht zu einem Hundefriseur kommen können. Ich komme gerne zu Ihnen nach Hause und gebe Ihrem Hund eine Schönheitsbehandlung, ohne dass Sie Ihr Haus verlassen müssen.
-                        </p>
-                        <button onclick="location.href='about_me.html'" type="button">Vollständige Einführung</button>
-                    </div>
-                </div>   
-
-                <h3>Vorher Nachher</h3>
-                <div class="align-center">
-                    <div class="direction-on-size">
-                        <img src="before.png" alt="Vor dem Bild" class="larger-image round-left-on-size">
-                
-                        <img src="after.png" alt="Nach dem Bild" class="larger-image round-right-on-size">
-                    </div>    
-
-                    <div>
-
-                    <button onclick="location.href='price_list.html'" type="button" class="primary" style="margin-right: 10px;">Zur Preisliste</button>
-                    <button onclick="location.href='contact.html'" type="button"  style="margin-right: 10px;">Zu Kontakten</button>
-                    <button onclick="location.href='pictures.html'" type="button">Mehr Bilder</button>
-                    </div>
-                </div>
-            </div> 
+            <img src="media/banner.jpg" alt="Banner">
         </div>
+
+
+        <a href="#mich" class="arrow-container">
+            <div alt="down arrow" class="arrow-bg"></div>
+            <img src="media/icons/more.svg" alt="down arrow" class="arrow">
+            <div class="circle"></div>
+        </a>
+
+        
+        <div class="main-content">
+            <h3 id="mich" style="margin-top: 0px;">Ein paar Worte über mich</h3>
+            <div class="direction-on-size">
+                <img src="media/me.jpg" alt="Bild von mir" class="large-image">
+                <div class="align-up">
+                    <p class="large">Ich habe Tiere schon immer geliebt. Ich habe selbst einen Hund und beschloss 2015, in Ungarn eine Ausbildung zur Hundefriseurin zu machen. Ich habe die Prüfungen mit gutem Erfolg bestanden. Im Jahr 2022 bin ich nach Österreich gezogen und möchte Kunden helfen, die aus irgendeinem Grund nicht zu einem Hundefriseur kommen können. Ich komme gerne zu Ihnen nach Hause und gebe Ihrem Hund eine Schönheitsbehandlung, ohne dass Sie Ihr Haus verlassen müssen.
+                    </p>
+                    <a href='about_me.html' class="button singular">Vollständige Einführung</a>
+                </div>
+            </div>   
+
+            <h3>Vorher Nachher</h3>
+            <div class="align-center">
+                <div class="direction-on-size">
+                    <img src="media/before.png" alt="Vor dem Bild" class="larger-image round-left-on-size">
+            
+                    <img src="media/after.png" alt="Nach dem Bild" class="larger-image round-right-on-size">
+                </div>    
+
+                <div class="list">
+                <a href='price_list.html' class="button primary">Zur Preisliste</a>
+                <a href='pictures.html' class="button">Mehr Bilder</a>
+                <a href='contact.html' class="button">Zu Kontakten</a>
+                </div>
+            </div>
+        </div> 
     </div>
 </body>
 </html>
