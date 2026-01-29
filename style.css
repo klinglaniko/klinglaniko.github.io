@@ -320,7 +320,7 @@ a {
 }
 
 a:visited {
-    color: var(--secondary-color);
+    color: var(--surface-highest-color);
 }
 
 a:hover {
@@ -367,8 +367,8 @@ iframe.maps {
 }
 
 .maphelper {
-    background-color: var(--surface-low-color);
-    object-fit: cover;
+    background-color: var(--text-color);
+    object-fit: contain;
     flex: 1;
     height: 450px;
 }
@@ -414,6 +414,8 @@ button img,
 .button.dark {
     border-color: var(--dark-outline-color) !important;
     color: var(--dark-primary-color) !important;
+    background-color: transparent !important;
+    transition: background-color var(--transition-speed);
 }
 
 .button.dark>img {
@@ -437,17 +439,22 @@ button.singular {
 }
 
 .button.primary.floating {
-    bottom: 60px;
+
+
+    box-shadow: var(--box-shadow);
+}
+
+.floating {
+    justify-content: center;
+    bottom: var(--page-padding);
     z-index: 9999;
-    position: absolute;
-   scale: 1.2;
-   box-shadow: var(--box-shadow);
+    position: sticky;
 }
 
 button,
 .button {
-    transition: background-color var(--transition-speed);
-    background-color: transparent;
+    transition: filter var(--transition-speed);
+    background-color: var(--background-color);
     border: var(--border);
     color: var(--primary-color) !important;
     padding: var(--button-padding-with-outline);
@@ -516,23 +523,26 @@ dialog>.cards.vertical>a>div>img {
 
 button:hover,
 .button:hover {
-    background-color: var(--hover-background-color);
+    filter: var(--hover-brightness-inverse);
 }
 
 button.dark:hover,
 .button.dark:hover {
     background-color: var(--dark-hover-background-color) !important;
+    filter: unset !important;
 }
 
 button.dark:active,
 .button.dark:active {
     background-color: var(--dark-click-background-color) !important;
+    filter: unset !important;
 }
+
 
 
 button:active,
 .button:active {
-    background-color: var(--click-background-color);
+    filter: var(--click-brightness-inverse);
 }
 
 .primary,
@@ -554,18 +564,24 @@ button:active,
 
 .primary:hover,
 .secondary:hover,
-.align-children-title-images-to-center a:hover,
+.align-children-title-images-to-center a:hover {
+    filter: var(--hover-brightness);
+}
+
 button.owl-next:hover,
 button.owl-prev:hover {
-    filter: var(--hover-brightness);
+    filter: var(--hover-brightness-inverse);
 }
 
 .primary:active,
 .secondary:active,
-.align-children-title-images-to-center a:active,
+.align-children-title-images-to-center a:active {
+    filter: var(--click-brightness);
+}
+
 button.owl-next:active,
 button.owl-prev:active {
-    filter: var(--click-brightness);
+    filter: var(--click-brightness-inverse);
 }
 
 .chip-group {
@@ -643,7 +659,7 @@ button.owl-prev:active {
 }
 
 #logo {
-    filter: var(--primary-overlay);
+
 }
 
 .toolbar img {
@@ -660,29 +676,24 @@ button.owl-prev:active {
 }
 
 .banner-foreground {
-    display: flex !important;
+
     position: absolute;
     z-index: 10;
     height: 100% !important;
     min-width: 0px !important;
-    align-items: stretch !important;
-}
-
-.banner-foreground>div.image-container {
-
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(var(--page-width) * 1.2) !important;
     display: flex !important;
-    margin-left: 25px;
-    margin-right: 100px;
-    align-self: stretch;
-    min-width: 0px;
-    height: calc(100% - 100px);
 
-    animation-name: floatFromRight;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-
+    align-items: center;
 }
+
+.banner-foreground>div {}
 
 .img-group {
     flex: 1;
@@ -761,7 +772,7 @@ button.owl-prev:active {
 
     font-size: 30px;
     font-weight: unset;
-
+    text-wrap: balance
 }
 
 .banner-foreground h1,
@@ -796,6 +807,23 @@ button.owl-prev:active {
 
     align-self: flex-start;
     object-fit: cover;
+}
+
+.mt-image {
+
+    min-width: auto;
+    border-radius: 25px;
+    display: block;
+    margin-right: 25px;
+    align-self: flex-start;
+    object-fit: cover;
+
+    max-width: 300px;
+    width: 300px;
+    max-height: 300px;
+    height: 300px;
+
+    margin: 7.5px;
 }
 
 .medium-image {
@@ -1191,6 +1219,7 @@ a.arrow-container:active>.circle {
 .summary-container.center p {
     color: var(--text-color);
     z-index: 3;
+
 }
 
 .cards div p {
@@ -1315,7 +1344,7 @@ b {
     padding-left: 16.46px;
     padding-right: 16.46px;
     color: var(--secondary-text-color) !important;
-    background-color: var(--secondary-color);
+    background-color: var(--surface-color);
 
     border-radius: 100px;
     box-shadow: var(--box-shadow);
@@ -1360,7 +1389,7 @@ a.summary-container>img:last-child {
 .summary-container.center>div,
 .summary-container.center>h2 {
 
-    padding: 40px;
+    padding: var(--page-padding);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1406,6 +1435,14 @@ button.owl-prev {
     margin-left: -16.46px;
 }
 
+.with-gap {
+    gap: var(--container-margin);
+
+}
+
+.with-gap>div {
+    align-self: flex-end;
+}
 
 button.owl-next {
     right: 0px;
@@ -1419,16 +1456,37 @@ button.owl-next {
 
 }
 
+
 .table {
     font-size: medium !important;
     background-color: var(--surface-low-color);
     padding: var(--button-padding);
 }
 
+td>p:nth-child(1) {
+    font-size: large !important;
+    padding: unset !important;
+}
+
+td>p:nth-child(2) {
+    padding: unset !important;
+    margin-top: var(--text-margin);
+    font-size: small !important;
+}
+
 .top-left {
     border-top-left-radius: var(--border-radius);
     margin-right: 2.5px;
     margin-bottom: 2.5px;
+}
+
+.top {
+    margin-right: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+.bottom {
+    margin-right: 2.5px;
 }
 
 .left {
@@ -1503,14 +1561,45 @@ button.owl-next {
             font-size: 20px;
         }
 
-        @media (max-width: 880px) {
+        @media (max-width: 865px) {
+            .with-gap {
+                gap: 0px;
+            }
 
-            iframe.maps, img.maphelper {
+            .with-gap>div {
+                align-self: flex-start;
+            }
+
+            .button.dark {
+                border: unset !important;
+                color: var(--text-color) !important;
+                background-color: var(--surface-low-color) !important;
+                transition: filter var(--transition-speed);
+                box-shadow: var(--box-shadow);
+            }
+
+            .button.dark>img {
+                filter: var(--black-overlay) !important;
+            }
+
+            .button.dark:hover {
+                background-color: var(--surface-low-color) !important;
+                filter: var(--hover-brightness-inverse) !important;
+            }
+
+            .button.dark:active {
+                background-color: var(--surface-low-color) !important;
+                filter: var(--click-brightness-inverse) !important;
+            }
+
+
+            iframe.maps,
+            img.maphelper {
                 flex: unset !important;
                 width: 100% !important;
                 height: 300px !important;
-               object-fit: contain;
-                
+                object-fit: contain;
+
             }
 
             .round-left-on-size {
@@ -1538,6 +1627,9 @@ button.owl-next {
 
             .main-content {
                 min-height: calc(100dvh - var(--toolbar-height) - var(--page-padding)*2 - var(--container-margin)*2 - var(--tab-height));
+
+
+
             }
 
             .webbar {
@@ -1621,6 +1713,7 @@ button.owl-next {
 
             .banner-foreground {
                 justify-content: center !important;
+
             }
 
 
@@ -1647,6 +1740,23 @@ button.owl-next {
             }
 
             @media (max-width: 546px) {
+                .mt-image {
+                    aspect-ratio: 3/2;
+                    width: auto;
+                    max-width: 100%;
+                    height: auto;
+                    max-height: auto;
+                    min-width: 0;
+                    min-height: 0;
+                }
+
+                table {
+                    display: block;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                    width: calc(100vw - var(--page-padding)*2);
+                    ;
+                }
 
                 .dialog-header h3 {
                     font-size: large !important;
@@ -1681,14 +1791,14 @@ button.owl-next {
 
 
 
-                img{
+                img {
                     width: 100%;
 
                     height: auto;
                 }
 
-                img.maphelper{
-                    object-fit: cover;
+                img.maphelper {
+                    object-fit: contain;
                 }
 
                 .tab-layout {
