@@ -1842,7 +1842,7 @@ td>p:nth-child(2) {
                     height: var(--toolbar-small-height) !important;
                 }
 
-                .toolbar>h1 {
+                .toolbar>div>h1 {
                     font-size: x-large;
                 }
 
